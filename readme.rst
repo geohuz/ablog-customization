@@ -170,3 +170,21 @@ open ``site-packages/sphinx/builders/html.py``, locate the line with ``# local T
                   while subnode:
                       subnode['iscurrent'] = True
                       subnode = subnode.parent
+
+open ``site-packages/sphinx/themes/basic/localtoc.html``, change according the following code:
+
+.. code:: html
+
+  {#
+    basic/localtoc.html
+    ~~~~~~~~~~~~~~~~~~~
+
+    Sphinx sidebar template: local table of contents.
+
+    :copyright: Copyright 2007-2018 by the Sphinx team, see AUTHORS.
+    :license: BSD, see LICENSE for details.
+  #}
+  {%- if display_toc %}
+    <h3><a href="{{ pathto(master_doc) }}">{{ _('Table of Contents') }}</a></h3>
+    {{ local_toctree }}   {# change here #}
+  {%- endif %}
