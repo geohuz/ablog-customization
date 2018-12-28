@@ -133,7 +133,7 @@ open ``site-packages/sphinx/builders/html.py``, locate the line with ``# local T
           rellinks = rellinks,
           sourcename = sourcename,
           toc = toc,
-          local_toctree = local_toctree,
+          local_toctree = local_toctree,      # added
           # only display a TOC if there's more than one item to show
           display_toc = (self.env.toc_num_entries[docname] > 1),
           page_source_suffix = source_suffix,
