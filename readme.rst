@@ -1,11 +1,23 @@
 
-customizing ablog with rtd theme and local toc tree
+Customizing ablog with rtd theme and local toc tree
 ===================================================
 
 .. post:: Dec 28, 2018
    :tags: sphinx
    :category: 文档
 
+
+Screenshots after the customization
+------------------------------------
+
+The local toc tree in the side bar:
+
+.. image:: _static/ss1.png
+
+
+The Ablog features in the side bar:
+
+.. image:: _static/ss2.png 
 
 Configuration in ablog
 ----------------------
@@ -158,7 +170,3 @@ open ``site-packages/sphinx/builders/html.py``, locate the line with ``# local T
                   while subnode:
                       subnode['iscurrent'] = True
                       subnode = subnode.parent
-
-
-
-
